@@ -13,7 +13,7 @@
 
 .error { background-color: #fcc; }
 
-#flash .flash { height:2em; text-align: center; position relative; left: 0; top: 0; width: 100%; line-height: 2em;}
+#flash .flash { height:2em; text-align: center; position relative; left: 0; top: 0; width: 100%; line-height: 2em;cursor: pointer;}
 #flash .error { background: #fcc; }
 #flash .notice { background: #cfc; }
 
