@@ -1,0 +1,11 @@
+#nav { overflow: hidden;  margin-left: 2em;}
+
+#nav li { overflow: hidden; float: left; list-type: none; margin-right: 1em;}
+
+#header { overflow: hidden; margin-bottom: 1em;}
+
+#auth {float: right;}
+
+#footnotes_debug { font-size: 10px;}
+
+#logo { float: left; font-size: 1.6em;}

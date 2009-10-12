@@ -1,0 +1,22 @@
+.row
+  .column.grid_2
+    #header
+      #logo
+        = AppConfig.app_name
+  .column.grid_6
+    #nav
+      %span Nav1
+      %span Nav2
+      %span Nav3
+      %span Nav4
+  .column.grid_4  
+    #auth
+      - if logged_in?
+        = link_to current_user.login, current_user
+        |
+        %a{:href=>'/logout'}
+          Logout
+      - else
+        %a{ :href=>'/login' } Login
+        |
+        %a{ :href=>'/users/new' } Signup

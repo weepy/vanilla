@@ -1,0 +1,17 @@
+!!! XML
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %meta{'http-equiv' => "content-type", :content => "text/html;charset=UTF-8"}
+    %title= @browser_title || AppConfig.app_name
+    = render :partial => "shared/css"
+    = render :partial => "shared/javascript"
+    = render :partial => "shared/inline_javascript"
+  %body{body_attributes}
+    = render :partial => "shared/flash"
+    .row
+      .column.grid_12
+        = render :partial => "shared/header"
+        = yield
+        = render :partial => "shared/footer"
+    = render :partial => "shared/end_of_body"

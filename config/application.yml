@@ -1,0 +1,15 @@
+:defaults: &defaults
+  :app_name: App Name
+  :app_domain: localhost:3000
+  :admin_email: info@app.com
+    
+:development:
+  <<: *defaults
+
+:test:
+  <<: *defaults
+
+:production:
+  <<: *defaults
+  :app_domain: account.example.com
+  :ga_code: UA-XXXX-1

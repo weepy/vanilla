@@ -1,0 +1,86 @@
+/*
+ *  
+ */
+
+/*
+ * Reset
+ * Loosely based on Eric Meyer's CSS Reset http://meyerweb.com/eric/tools/css/reset/ 
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin: 0; padding: 0; }
+fieldset, img { border: none; vertical-align: middle; }
+
+/*
+ * Margins
+ */
+p, ul, ol, dl, table, address, pre, fieldset { margin: 0 0 1.5em; 0; }
+
+/*
+ * Hyperlinks
+ */
+a { text-decoration: underline; overflow: hidden; }
+a:hover, a:focus { text-decoration: none; }
+
+/*
+ * General Document Settings
+ */
+body { margin: 2em; font: 1em/1.5em sans-serif; }
+
+/*
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 { font-size: 1em; margin: 1em 0 .5em 0; font-family: serif; }
+h1 { font-size: 2em; margin-top: 0; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.125em; }
+
+/*
+ * Lists
+ */
+ul { margin-left: 2.2em; }
+li ul, li ol { margin-top: 0; margin-bottom: 0; }
+li { margin: .3em 0; }
+ol { margin-left: 2.2em; }
+ol ul li { list-style: disc !important; }
+ol li { list-style-type: decimal; }
+ol li ol li { list-style-type: lower-alpha; }
+ol li ol li ol li { list-style-type: upper-roman; }
+
+/*
+ * Definition List
+ */
+dt { font-weight: bold; }
+dd { margin-bottom: .5em; }
+
+/*
+ * Table
+ */
+table { border-collapse: collapse; border: 1px solid #999; width: 100%; }
+caption, th, td { text-align: left; padding: 4px; }
+th, td { border: 1px solid #999; }
+caption, th { font-weight: bold; }
+
+/*
+ * Quotes
+ */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/*
+ * Code
+ */
+pre { border: 1px solid #999; }
+code, pre { font-size: 1em; }
+
+/*
+ * Forms
+ */
+input, select, textarea, button { font-size: 1em; font-family: inherit; padding: .3em; }
+fieldset { border: 1px solid #999; padding: 1em 2em; }
+
+form ol { margin: 0; }  
+form li { list-style: none; }  
+form li label { display: block; }  
+form .inline label { display: inline; }  
+form .inline input { margin-right: 1em; }
