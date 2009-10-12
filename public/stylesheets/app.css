@@ -9,3 +9,12 @@
 #footnotes_debug { font-size: 10px;}
 
 #logo { float: left; font-size: 1.6em;}
+
+
+.error { background-color: #fcc; }
+
+#flash .flash { height:2em; text-align: center; position relative; left: 0; top: 0; width: 100%; line-height: 2em;}
+#flash .error { background: #fcc; }
+#flash .notice { background: #cfc; }
+
+#container { padding-top: 2em;}

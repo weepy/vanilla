@@ -8,8 +8,11 @@
     = render :partial => "shared/javascript"
     = render :partial => "shared/inline_javascript"
   %body{body_attributes}
-    = render :partial => "shared/flash"
-    .row
+    #flash
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :class => "flash #{name}"
+
+    .row#container
       .column.grid_12
         = render :partial => "shared/header"
         = yield
