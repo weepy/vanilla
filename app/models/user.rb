@@ -1,6 +1,40 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  
+  
+  
+  def name
+    login
+  end
+    
+  
+  
+  
+  ####### SIMPLE ROLES #########
+  
+  ROLES = {:admin => 1}
+  
+  def role? name
+    (roles || 0) & ROLES[name] > 0
+  end
+
+  def add_role name
+    role = ROLES[name]
+    update_attribute "roles", roles | role
+  end
+
+  def remove_role name
+    role = ROLES[name]
+    update_attribute "roles", roles & (~role)
+  end
+
+  def admin?
+    role? :admin
+  end
+  
+  ######### RESTFUL AUTH STUFF ##########
+   
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
@@ -26,9 +60,7 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :name, :password, :password_confirmation
 
-  def name
-    login
-  end
+
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   #
