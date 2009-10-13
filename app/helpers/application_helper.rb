@@ -12,4 +12,11 @@ module ApplicationHelper
     "#{@controller.controller_name.dasherize}-#{@controller.action_name.dasherize}"
   end
   
+  def link obj, opts = {}
+    klass = obj.class.to_s.downcase
+    opts[:class] ||= klass
+    opts[:id] ||= "#{klass}_#{obj.id}"
+    link_to (opts[:text] || obj.name), (opts[:link] || obj), opts    
+  end
+  
 end
